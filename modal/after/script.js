@@ -5,10 +5,10 @@
     * close-modal-btn
     * BONUS: overlay
 */
-const modal = document.getElementById("modal")
-const openModalButton = document.getElementById("open-modal-btn")
-const closeModalButton = document.getElementById("close-modal-btn")
-const overlay = document.getElementById("overlay")
+const modal = document.querySelector("#modal")
+const openModalButton = document.querySelector("#open-modal-btn")
+const closeModalButton = document.querySelector("#close-modal-btn")
+const overlay = document.querySelector("#overlay")
 
 // TODO: 3. Create a click event listener for the open-modal-btn that adds the class "open" to the modal
 // BONUS: Also add the class "open" to the overlay

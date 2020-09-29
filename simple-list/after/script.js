@@ -1,24 +1,25 @@
-const list = document.getElementById("list")
-const form = document.getElementById("new-item-form")
-const itemInput = document.getElementById("item-input")
+// 1. Select all elements
+const form = document.querySelector("#new-item-form")
+const list = document.querySelector("#list")
+const input = document.querySelector("#item-input")
 
+// 2. When I submit the form add a new element
 form.addEventListener("submit", e => {
-  // Prevent submission
   e.preventDefault()
 
-  // Create new item
-  const newItem = document.createElement("div")
-  newItem.innerText = itemInput.value
-  newItem.classList.add("list-item")
+  // 1. Create a new item
+  const item = document.createElement("div")
+  item.innerText = input.value
+  item.classList.add("list-item")
 
-  // Add new item to list
-  list.appendChild(newItem)
+  // 2. Add that item to the list
+  list.appendChild(item)
 
-  // Clear input
-  itemInput.value = ""
+  // 3. Clear input
+  input.value = ""
 
-  // Remove when clicked
-  newItem.addEventListener("click", () => {
-    list.removeChild(newItem)
+  // 4. Setup event listener to delete item when clicked
+  item.addEventListener("click", e => {
+    item.remove()
   })
 })
