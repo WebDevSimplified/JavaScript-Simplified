@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .errors {
+      display: none;
+    }
+
+    .errors.show {
+      display: block;
+    }
+  </style>
+  <!-- TODO: Add the script tag -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <form action="thank-you.html" id="form">
+    <div class="errors">
+      <h3 class="error-title">Error</h3>
+      <ul class="errors-list">
+      </ul>
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+    </div>
+
+    <div class="form-group">
+      <label for="password-confirmation">Password Confirmation</label>
+      <input type="password" id="password-confirmation" name="password-confirmation">
+    </div>
+
+    <div class="form-group">
+      <label for="terms">
+        <input type="checkbox" id="terms" name="terms">
+        Agree To Terms?
+      </label>
+    </div>
+
+    <button type="submit">Create Account</button>
+  </form>
+</body>
+</html>

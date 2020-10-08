@@ -1,0 +1,28 @@
+.errors {
+  background-color: hsl(0, 100%, 80%);
+  border-radius: .5rem;
+  padding: 10px;
+  color: hsl(0, 50%, 20%);
+  margin-bottom: 1rem;
+}
+
+#form {
+  margin: 1rem 0;
+}
+
+.error-title {
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+.errors-list {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
