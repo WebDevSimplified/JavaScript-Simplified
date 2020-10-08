@@ -61,7 +61,7 @@ function startNote(noteDetail, gain) {
   const gainNode = audioContext.createGain()
   gainNode.gain.value = gain
   const oscillator = audioContext.createOscillator()
-  oscillator.frequency = noteDetail.frequency
+  oscillator.frequency.value = noteDetail.frequency
   oscillator.type = "sine"
   oscillator.connect(gainNode).connect(audioContext.destination)
   oscillator.start()
