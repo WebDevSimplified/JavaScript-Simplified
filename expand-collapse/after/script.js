@@ -5,5 +5,10 @@ document.addEventListener("click", e => {
   const cardBody = card.querySelector(".card-body")
 
   cardBody.classList.toggle("show")
-  e.target.innerText = e.target.innerText === "Expand" ? "Collapse" : "Expand"
+  if (e.target.innerText === "Expand") {
+    e.target.innerText = "Collapse"
+  } else {
+    e.target.innerText = "Expand"
+  }
+  // e.target.innerText = e.target.innerText === "Expand" ? "Collapse" : "Expand"
 })
