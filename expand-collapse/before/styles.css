@@ -1,0 +1,40 @@
+body {
+  background-color: #DCDCDC;
+  padding: 1rem;
+  margin: 0;
+}
+
+.card {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: .5rem;
+  font-size: 2rem;
+  align-items: center;
+  margin-bottom: -1px;
+}
+
+.card-body {
+  padding: 0 .5rem;
+  height: 0;
+  overflow: hidden;
+}
+
+.card-body.show {
+  height: auto;
+  padding: .5rem;
+}
+
+button {
+  cursor: pointer;
+}
