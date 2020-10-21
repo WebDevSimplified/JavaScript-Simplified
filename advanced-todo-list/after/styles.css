@@ -1,0 +1,39 @@
+#new-todo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#new-todo-form > * {
+  margin: .15rem;
+}
+
+#list {
+  padding: 0;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.list-item-label:hover,
+[data-list-item-checkbox]:hover {
+  cursor: pointer;
+}
+
+.list-item-label:hover > [data-list-item-text] {
+  color: #333;
+  text-decoration: line-through;
+}
+
+[data-list-item-checkbox]:checked ~ [data-list-item-text] {
+  text-decoration: line-through;
+  color: #AAA;
+}
+
+[data-button-delete] {
+  margin-left: .5rem;
+}
+
+button {
+  cursor: pointer;
+}
