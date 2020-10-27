@@ -1,34 +1,32 @@
-const MAP_ELEMENT_ID = "map"
 const MAPBOX_ACCESS_TOKEN =
   "pk.eyJ1Ijoid2ViZGV2c2ltcGxpZmllZCIsImEiOiJja2dyYTRqbW0weWl1MnJxaWF2dGR0ZHMwIn0.lU-OINCILi52P5N98qMbtA"
 
-navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
+navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
   enableHighAccuracy: true
 })
 
-function locationSuccess(position) {
-  setupMap([position.coords.longitude, position.coords.latitude])
-}
-
-function locationError() {
-  setupMap([-2.24, 53.48])
-}
-
-function setupMap(center) {
+function setupMap(centerPosition) {
   const map = new mapboxgl.Map({
     accessToken: MAPBOX_ACCESS_TOKEN,
-    container: MAP_ELEMENT_ID,
+    container: "map",
     style: "mapbox://styles/mapbox/streets-v11",
-    center: center,
+    center: centerPosition,
     zoom: 15
   })
 
-  map.addControl(new mapboxgl.NavigationControl())
+  const navigationControls = new mapboxgl.NavigationControl()
+  map.addControl(navigationControls)
 
-  map.addControl(
-    new MapboxDirections({ accessToken: MAPBOX_ACCESS_TOKEN }),
-    "top-left"
-  )
+  const directionControls = new MapboxDirections({
+    accessToken: MAPBOX_ACCESS_TOKEN
+  })
+  map.addControl(directionControls, "top-left")
+}
 
-  return map
+function successLocation(position) {
+  setupMap([position.coords.longitude, position.coords.latitude])
+}
+
+function errorLocation() {
+  setupMap([-2.24, 53.48])
 }
