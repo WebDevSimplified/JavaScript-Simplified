@@ -1,11 +1,11 @@
 {
-  "name": "after",
+  "name": "current-project",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "index.js",
   "scripts": {
-    "start": "parcel index.html about.html team.html",
-    "build": "parcel build index.html about.html team.html"
+    "start": "parcel index.html team.html store.html",
+    "build": "parcel build index.html team.html store.html"
   },
   "keywords": [],
   "author": "",

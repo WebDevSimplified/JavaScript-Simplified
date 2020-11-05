@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <title>Team</title>
+  <title>About</title>
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="text-gray-700 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-center">
       <nav class="flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
-        <a class="mr-5 hover:text-gray-900" href="store.html">Store</a>
-        <a class="mr-5 border-b-2 border-blue-500 hover:text-gray-900" href="team.html">Team</a>
+        <a class="mr-5 hover:text-gray-900" href="/index.html">Home</a>
+        <a class="mr-5 hover:text-gray-900" href="/store.html">Store</a>
+        <a class="mr-5 border-b-2 border-blue-500 hover:text-gray-900" href="/team.html">Team</a>
       </nav>
     </div>
   </header>
@@ -110,8 +110,8 @@
     </div>
   </section>
   <section data-cart class="invisible">
-    <div class="bottom-0 mb-4 top-0 right-0 mr-4 mt-20 fixed">
-      <div data-cart-items-wrapper class="invisible bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col max-h-full">
+    <div data-cart-items-wrapper class="invisible mb-4 top-0 right-0 mr-4 mt-20 fixed">
+      <div style="max-height: calc(100vh - 6rem);" class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col">
         <div data-cart-items class="overflow-y-auto px-4 pt-4"></div>
         <div class="flex justify-between items-end border-t p-4">
           <span class="font-bold text-lg uppercase">Total</span>
@@ -128,8 +128,8 @@
   </section>
   <template id="cart-item-template">
     <div data-item class="mb-6">
-      <div class="block relative h-24 relative">
-        <img alt="ecommerce" data-image class="object-cover rounded object-center w-full h-full block">
+      <div class="block relative h-24 rounded overflow-hidden">
+        <img data-image alt="ecommerce" class="object-cover object-center w-full h-full block rounded">
         <button data-remove-from-cart-button class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center">&times;</button>
       </div>
       <div class="mt-2 flex justify-between">

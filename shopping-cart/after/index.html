@@ -51,8 +51,8 @@
     </div>
   </section>
   <section data-cart class="invisible">
-    <div class="bottom-0 mb-4 top-0 right-0 mr-4 mt-20 fixed">
-      <div data-cart-items-wrapper class="invisible bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col max-h-full">
+    <div data-cart-items-wrapper class="invisible mb-4 top-0 right-0 mr-4 mt-20 fixed">
+      <div style="max-height: calc(100vh - 6rem);" class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col">
         <div data-cart-items class="overflow-y-auto px-4 pt-4"></div>
         <div class="flex justify-between items-end border-t p-4">
           <span class="font-bold text-lg uppercase">Total</span>
@@ -69,8 +69,8 @@
   </section>
   <template id="cart-item-template">
     <div data-item class="mb-6">
-      <div class="block relative h-24 relative">
-        <img alt="ecommerce" data-image class="object-cover rounded object-center w-full h-full block">
+      <div class="block relative h-24 rounded overflow-hidden">
+        <img data-image alt="ecommerce" class="object-cover object-center w-full h-full block rounded">
         <button data-remove-from-cart-button class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center">&times;</button>
       </div>
       <div class="mt-2 flex justify-between">
